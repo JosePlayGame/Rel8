@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 class Program
 {
     static void Main(string[] args){
-        GuardadoDatos();
+        CopiarFichero(args[0],args[1]);
     }
     #region menu
     static void Menu(){
@@ -87,21 +87,17 @@ class Program
             }
         }
     #endregion
-    #region Ej2 Incompleto
+    #region Ej2
         
     /*
         2. Haz un programa que copie el contenido de un fichero en otro. Ambos ficheros se pasan desde la línea 
         de comandos según el siguiente formato:
     */
     static void CopiarFichero(string FicheroOrigen,string FicheroDestino){
-        if (!Path.Exists(FicheroOrigen))
+        if (Path.Exists(FicheroOrigen) &&  Path.Exists(FicheroDestino))
         {
-            System.Console.WriteLine("El fichero de origen no existe");
-        }else
-        {
-            System.Console.WriteLine(FicheroOrigen);
-            System.Console.WriteLine(FicheroDestino);
-            File.Copy(FicheroOrigen,FicheroDestino);
+            string str = File.ReadAllText(FicheroOrigen);
+            File.WriteAllText(FicheroDestino,str);
         }
     }
     #endregion
@@ -222,4 +218,5 @@ class Program
         File.AppendAllText("usuarios.txt",File.ReadAllText(Path.GetFullPath(listaUSuario.ruta)));
     }
     #endregion
+    
 }
