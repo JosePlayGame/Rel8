@@ -26,3 +26,7 @@ C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\
 C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\obj\Debug\net8.0\Relacion 8.pdb
 C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\obj\Debug\net8.0\Relacion 8.genruntimeconfig.cache
 C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\obj\Debug\net8.0\ref\Relacion 8.dll
+C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\obj\Debug\net8.0\Relacion 8.csproj.AssemblyReference.cache
+C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\obj\Debug\net8.0\Relacion 8.sourcelink.json
+C:\Users\arman\OneDrive\Escritorio\programacio\3trimestre\Relaciones\Relacion 8\obj\Debug\net8.0\Relacion 8.csproj.Up2Date

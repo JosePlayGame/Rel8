@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "32LzQfFBknzJIC+WLXvONY2TA5sIC3PKtn+cBFGLkRqFNV5iaQp3Grqqgw/Qr70YfJERC7HK6jMVXkbGeOzT2A==",
+  "dgSpecHash": "SbAqjWz85htSlTTv+eb6g8aFY9oaTIKDr9PP5ahWdn0qI9t7nBnX5W2OedaySKqmdRNgT93QnNabtWs9Uimx+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\arman\\OneDrive\\Escritorio\\programacio\\3trimestre\\Relaciones\\Relacion 8\\Relacion 8.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\arman\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
