@@ -14,4 +14,8 @@ public class ALumnos
         this.Apellido1 = Apellido1;
         this.Apellido2 = Apellido2;
     }
+    public override string ToString()
+    {
+        return $"{Nombre,-10} {Apellido1,-10} {Apellido2,-10}";
+    }
 }

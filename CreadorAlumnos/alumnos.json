@@ -1,107 +1,57 @@
 [
   {
-    "Nombre": "Juan",
-    "Apellido1": "Hernández",
-    "Apellido2": "Moreno"
-  },
-  {
-    "Nombre": "Isabel",
-    "Apellido1": "Ruiz",
-    "Apellido2": "Rodríguez"
-  },
-  {
-    "Nombre": "María",
-    "Apellido1": "González",
-    "Apellido2": "Moreno"
-  },
-  {
-    "Nombre": "Lucía",
-    "Apellido1": "López",
-    "Apellido2": "Sánchez"
-  },
-  {
-    "Nombre": "Elena",
+    "Nombre": "Raquel",
     "Apellido1": "Moreno",
-    "Apellido2": "Martínez"
-  },
-  {
-    "Nombre": "Miguel",
-    "Apellido1": "Martínez",
-    "Apellido2": "Martínez"
-  },
-  {
-    "Nombre": "Isabel",
-    "Apellido1": "Torres",
-    "Apellido2": "Torres"
-  },
-  {
-    "Nombre": "Pedro",
-    "Apellido1": "Sánchez",
     "Apellido2": "Vázquez"
   },
   {
-    "Nombre": "Laura",
+    "Nombre": "José",
+    "Apellido1": "Moreno",
+    "Apellido2": "Moreno"
+  },
+  {
+    "Nombre": "Isabel",
+    "Apellido1": "Ramos",
+    "Apellido2": "Alvarez"
+  },
+  {
+    "Nombre": "Carmen",
     "Apellido1": "Díaz",
-    "Apellido2": "García"
+    "Apellido2": "Díaz"
   },
   {
-    "Nombre": "Carlos",
-    "Apellido1": "López",
-    "Apellido2": "López"
+    "Nombre": "Daniel",
+    "Apellido1": "Moreno",
+    "Apellido2": "Alvarez"
   },
   {
-    "Nombre": "Javier",
-    "Apellido1": "Díaz",
-    "Apellido2": "García"
-  },
-  {
-    "Nombre": "Miguel",
-    "Apellido1": "Pérez",
+    "Nombre": "Juan",
+    "Apellido1": "Vázquez",
     "Apellido2": "Pérez"
   },
   {
-    "Nombre": "Paula",
-    "Apellido1": "Díaz",
-    "Apellido2": "Sánchez"
-  },
-  {
-    "Nombre": "Pablo",
-    "Apellido1": "Ramos",
-    "Apellido2": "Sánchez"
-  },
-  {
-    "Nombre": "Miguel",
-    "Apellido1": "García",
-    "Apellido2": "Díaz"
-  },
-  {
-    "Nombre": "Javier",
-    "Apellido1": "Gómez",
-    "Apellido2": "Vázquez"
-  },
-  {
-    "Nombre": "Ana",
-    "Apellido1": "Jiménez",
-    "Apellido2": "Martín"
-  },
-  {
-    "Nombre": "Carlos",
-    "Apellido1": "Moreno",
-    "Apellido2": "Díaz"
+    "Nombre": "Carmen",
+    "Apellido1": "López",
+    "Apellido2": "Ruiz"
   },
   {
     "Nombre": "Sofía",
     "Apellido1": "Fernández",
-    "Apellido2": "Rodríguez"
+    "Apellido2": "García"
   },
   {
-    "Nombre": "Raquel",
-    "Apellido1": "Gómez",
-    "Apellido2": "Díaz"
+    "Nombre": "Isabel",
+    "Apellido1": "García",
+    "Apellido2": "Romero"
   },
   {
-    "Nombre": "Juan",
-    "Apellido1": "López",
-    "Apellido2": "Hernández"
+    "Nombre": "Isabel",
+    "Apellido1": "Fernández",
+    "Apellido2": "Martín"
+  },
+  {
+    "Nombre": "María",
+    "Apellido1": "Jiménez",
+    "Apellido2": "Jiménez"
   }
 ]

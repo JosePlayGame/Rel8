@@ -35,5 +35,21 @@ public class ListaAlumnos
         string json = JsonConvert.SerializeObject(listaAlumnos, Formatting.Indented);
         File.WriteAllText(ruta,json);
     }
+     public string ListarJSON(){
+        List<ALumnos> plantilla = new List<ALumnos>();
+        string str = string.Empty;
+        using(StreamReader sr = File.OpenText(ruta)){
+            plantilla = JsonConvert.DeserializeObject<List<ALumnos>>(sr.ReadToEnd())!;
+        }
+        if (plantilla!= null)
+        {
+            foreach (var item in plantilla)
+            {
+                str+=item +"\n";
+            }
+        }
+        return str;
+    }
+    
 
 }

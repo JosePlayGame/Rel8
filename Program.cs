@@ -4,72 +4,7 @@ using Newtonsoft.Json;
 class Program
 {
     static void Main(string[] args){
-        CopiarFichero(args[0],args[1]);
     }
-    #region menu
-    static void Menu(){
-        string cabecera="MENU PRINCIPAL";
-        string final="PULSA [ESC] PARA SALIR";
-        string[]opciones ={"[1] Clase PATH"
-        ,"[2] Copiar Fichero"
-        ,"[3] Copiar contenido sin caracter"
-        ,"[4] Mostrar Fichero"
-        ,"[5] Concatenar Ficheros"
-        ,"[6] Funciones Ficheros"
-        ,"[7] Mostrar ficheros concatenados"
-        ,"[8] Mostrar Fichero al reves"
-        ,"[9] Guardar datos"
-        ,"[F10] Manipulación almacen"
-        };
-        System.Console.WriteLine(cabecera + "\n" + new string('=',cabecera.Length));
-        foreach (var item in opciones)
-        {
-            System.Console.WriteLine(item);
-        }
-        System.Console.WriteLine(new string('=',final.Length)+"\n"+final);
-    }
-    static void EjecutarMenu(string[]args){
-        ConsoleKeyInfo tecla;
-        do
-        {
-            Menu();
-            tecla= Console.ReadKey();
-        } while (tecla.KeyChar!='1'&&tecla.KeyChar!='2'&&tecla.KeyChar!='3'&&tecla.KeyChar!='4'&&tecla.KeyChar!='5'&&tecla.KeyChar!='6'&&tecla.KeyChar!='7'&&
-        tecla.KeyChar!='8'&&tecla.KeyChar!='9'&&tecla.Key!=ConsoleKey.F10&&tecla.Key!=ConsoleKey.Escape
-        );
-        switch(tecla.KeyChar){
-            
-            case '1':
-                break;
-            case '2':
-                CopiarFichero(args[0],args[1]);
-                break;
-            case '3':
-                CopiarFicheroSinCaracter(args[0],args[1],args[2]);
-                break;
-            case '4':
-                LeerFichero(args[0]);
-                break;
-            case '5':
-                ConcatenarFicheros(args[0],args[1]);
-                break;
-            case '6':
-
-                break;
-            case '7':
-                MostrarFicheros(args);
-                break;
-            case '8':
-                AccesoAleatorio(args[0]);
-                break;
-            case '9':
-            case (Char)ConsoleKey.F10:
-                break;
-            case (Char)ConsoleKey.Escape:
-                return;
-        }
-    }
-    #endregion
     #region Ej1
         static void MostrarFichero(){
             string ruta = "c:/directorio1/directorio2/directorio3/texto.txt";
@@ -146,6 +81,7 @@ class Program
         }
     }
     #endregion
+    #region Ej6
     /*
     6. Escribe un programa que contenga dos funciones: CrearFichero(string fi) y ListarFichero(string fi) donde:
     a) La primera función almacena en un fichero de texto (fi) los nombres y apellidos de los alumnos. En nombre 
@@ -153,27 +89,21 @@ class Program
     b) Muestra por pantalla el contenido del fichero (fi) pasado.
     */
     static void CrearFichero(string fi){
-        ListaAlumnos listaAlumnos = new(20);
-        File.WriteAllText("../../../alumnos.txt",File.ReadAllText(fi));
+        ListaAlumnos listaAlumnos = new(10);
+        File.WriteAllText(fi,listaAlumnos.ListarJSON());
     }
-    static void ListarFichero(string fichero){
-        if (Path.Exists(fichero)){
-            StreamReader streamReader= new StreamReader(fichero);
-            System.Console.WriteLine(streamReader.ReadToEnd());
-            streamReader.Close();
+    static void ListarFichero(string fi){
+        if (Path.Exists(fi)){
+            using StreamReader sr = new StreamReader(fi);
+            System.Console.WriteLine(sr.ReadToEnd());
         }
-    }
-    #region Ej6 v2.0
-        static void CrearFichero2(){
-        ListaAlumnos listaAlumnos = new(20);
-        File.WriteAllText("alumnos.txt",File.ReadAllText(Path.GetFullPath(listaAlumnos.ruta)));
     }
     #endregion
     #region Ej7
     /*
         7. Escribe un programa que tome todos los ficheros dados como argumentos en la línea de comandos y 
         muestre por pantalla su contenido uno tras otro, separando cada contenido por una línea horizontal y el 
-        nombre del fichero que se mostrará(TERMINADO)
+        nombre del fichero que se mostrará
     */
     static string MostrarFicheros(string[]args){
         string str="LISTADO DE FICHEROS \n\n";
@@ -192,7 +122,7 @@ class Program
     #endregion
     #region EJ8
     //8. Haz un programa que muestre por pantalla el contenido de un fichero de texto al revés, desde el final
-    //hasta el principio. (TERMINADO)
+    //hasta el principio. 
     static void AccesoAleatorio(string fichero){
         if (Path.Exists(fichero))
         {

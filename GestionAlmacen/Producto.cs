@@ -19,8 +19,4 @@ public class Producto
     {
         return $"Nombre : {NombreArticulo} Precio Coste : {precio} PVP : {pvp}";
     }
-    public override bool Equals(object? obj)
-    {
-        return base.Equals(obj);
-    }
 }
