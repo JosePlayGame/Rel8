@@ -4,6 +4,27 @@ using Newtonsoft.Json;
 class Program
 {
     static void Main(string[] args){
+        
+        
+        if(args[0]!=null){
+            LeerFichero(args[0]);
+            AccesoAleatorio(args[0]);
+            GuardadoDatos(args[0]);
+            CrearFichero(args[0]);
+            ListarFichero(args[0]);
+        }
+        if(args.Length==2)
+        {
+            CopiarFichero(args[0],args[1]);
+            ConcatenarFicheros(args[0],args[1]);
+        }
+        else
+        {
+            CopiarFicheroSinCaracter(args[0],args[1],args[2]);
+            MostrarFicheros(args);
+        }
+        Thread.Sleep(3000);
+        Ej10();
     }
     #region Ej1
         static void MostrarFichero(){
@@ -34,6 +55,8 @@ class Program
             string str = File.ReadAllText(FicheroOrigen);
             File.WriteAllText(FicheroDestino,str);
         }
+        else
+            System.Console.WriteLine("No existe alguno de los ficheros");
     }
     #endregion
     #region Ej3
@@ -57,7 +80,7 @@ class Program
     #region Ej4
     //4. Haz un programa que muestre por pantalla en contenido de un fichero de texto pasado por la consola. (TERMINADO)
     public static void LeerFichero(string fichero){
-        if (File.Exists(fichero))
+        if (Path.Exists(fichero))
         {
             StreamReader reader = new StreamReader(fichero);
             System.Console.WriteLine(reader.ReadToEnd());
@@ -142,11 +165,18 @@ class Program
         9. Haz un programa que gestione un fichero en el que vaya guardando los datos: Nombre usuario, fecha, 
         hora y tiempo de conexión, para cada una de las veces que se ha ejecutado.
     */
-    static void GuardadoDatos(){
-        ListaUSuario listaUSuario= new ListaUSuario();
-        listaUSuario.GenerarUsuario(20);
-        File.AppendAllText("usuarios.txt",File.ReadAllText(Path.GetFullPath(listaUSuario.ruta)));
+    static void GuardadoDatos(string fichero){
+        string usuario;
+        usuario=Environment.UserName;
+        DateTime acceso = DateTime.Now;
+        string escritutar = usuario + "\n"+acceso;
+        File.WriteAllText(fichero,escritutar);
     }
     #endregion
-    
+    #region Ej10
+    static void Ej10(){
+        PintarFichero pintarFichero= new PintarFichero();
+        pintarFichero.Ejecutar();
+    }
+    #endregion
 }
